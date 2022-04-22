@@ -1,0 +1,75 @@
+{
+	"Connection" : {
+		"Headers" : {
+			"Content-type" : "application/json; charset=UTF-8",
+			"Access-Control-Allow-Origin" : "http://localhost/*",
+			"Access-Control-Allow-Methods" : "GET, PUT, POST, DELETE"
+		}
+	},
+	"Database" : {
+		"host" : "localhost",
+		"port" : "3306",
+		"dbname" : "suplementos",
+		"user" : "root",
+		"password" : ""
+	}, 
+	"Class" : [
+		{
+			"name" : "clientes",
+			"attributes" : [
+				"idCliente",
+				"nome",
+				"senha",
+				"email",
+				"nascimento",
+				"endereco",
+				"imagem"
+			]
+		},
+		{
+			"name" : "administrador",
+			"attributes" : [
+				"idAdministrador",
+				"nome",
+				"senha",
+				"email",
+				"nascimento",
+				"imagem"
+			]
+		},
+		{
+			"name" : "suplementos",
+			"attributes" : [
+				"idSuplemento",
+				"idAdministrador",
+				"tipo",
+				"preco",
+				"nome",
+				"quantidade",
+				"lancamento",
+				"imagem"
+			]
+		},
+		{
+			"name" : "promocoes",
+			"attributes" : [
+				"idPromocoes",
+				"idSuplementos",
+				"porcentagem",
+				"dias"
+			]
+		},
+		{
+			"name" : "pedidos",
+			"attributes" : [
+				"idPedido",
+				"idCliente",
+				"idSuplementos",
+				"nome",
+				"imagem",
+				"preco",
+				"quantidade"
+			]
+		}
+	]
+}
